@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #e3e9f7;
+    position: relative;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30px;
+    background: url(img/kobe3.jpg);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    border-radius: 0px 18px 18px 0px;   
+    transition: all .5s;
+    min-width: 89px;
+    z-index: 2;
+}
+
+#sidebar_content {
+    padding: 12px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.side-item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #202020;
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.side-item.active a {
+    color: #ffffff;
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+#logout {
+    border-top: 1px solid #ffffff;
+    padding: 12px;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #000000;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+#imagem_fundo {
+    width: 100%;
+    height: 100%;
+    background: url(img/kobe6.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#titulo {
+    color: black;
+    margin-left: 35%;
+    margin-right: 20%;
+    padding-top: 20%;
+    font-size: 100px;
+    line-height: 0.6;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#subtitulo {
+    color: rgb(0, 0, 0);
+    margin-left: 35%;
+    margin-right: 28%;
+    margin-top: 1%;
+    border-top: 5px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    float: left;
+}
+
+#iKobe_Bryant {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#titulo2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#Kobe_Bryant {
+    background: url(img/kobe23.jpg);
+}
+
+.coluna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-container, .text-container {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.video-container {
+    max-width: 45%;
+}
+
+.text-container {
+    max-width: 45%;
+    color: #ffffff;
+}
+
+#titulos {
+    background: url(img/kobe16.jpg);
+}
+
+#titulo3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: larger;
+}
+
+.coluna {
+    float: left;
+    padding: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 5%;
+    position: relative;
+}
+
+.cinco {
+    width: 15%;
+}
+
+#NBA {
+    width: 140px;
+    height: 150px;
+}
+
+.imgeco {
+    width: 80%;
+    height: 25%;
+}
+#ano {
+    color: #ffffff;
+    padding: 8%;
+    font-size: larger;
+}
+
+#texttitulos {
+    color: #ffffff;
+    font-size: larger;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.centralizado {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .coluna {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container, .text-container {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    background-color: #000000;
+    float: left;
+    width: 100%;
+    color: white;
+}
+
+#footer1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#creditos {
+    text-align: center;
+    padding: 2%;
+}
+
+#info {
+    padding: 2%;
+}
+
+#meu_nome {
+    padding-left: 2%;
+}
+
+#eu {
+    width: 70px;
+}
